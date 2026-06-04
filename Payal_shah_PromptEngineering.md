@@ -1,4 +1,3 @@
-
 # Prompt Engineering Portfolio
 Name: Payal Shah  
 Date: 2026-06-04  
@@ -20,7 +19,7 @@ You are a friendly teacher. Explain neural networks to a 10-year-old using simpl
 You are an expert science teacher explaining AI to children. Explain neural networks to a 10-year-old using real-life analogies (like brain, games, or toys), short sentences, and no technical jargon.
 
 **Final Output:**  
-A neural network is like a brain made of tiny connected helpers called “neurons.” Just like how you learn to recognize animals by seeing many pictures, computers learn by seeing many examples...
+A neural network is like a brain made of many tiny connected helpers called neurons. Each neuron helps the computer make decisions by learning patterns. For example, if you show many pictures of cats and dogs, the network slowly learns how to tell the difference. At first it makes mistakes, but over time it improves by learning from those mistakes, just like how children learn from practice. This is how computers can recognize faces, translate languages, and even recommend videos.
 
 ---
 
@@ -28,15 +27,15 @@ A neural network is like a brain made of tiny connected helpers called “neuron
 
 | Version | Prompt | What Changed | Why Improved |
 |--------|--------|--------------|-------------|
-| V1 | Basic prompt | No context | Output was too technical |
-| V2 | Added role | Teacher role added | More child-friendly |
-| V3 | Added constraints | Simplified language + analogies | Much clearer and engaging |
+| V1 | Basic prompt | No role/context | Too technical |
+| V2 | Added teacher role | Added persona | More engaging |
+| V3 | Added constraints | Simplified language + analogies | Clear and age-appropriate |
 
 ---
 
 ### 1.3 Role & Context Usage
 
-Adding role improved clarity because the model followed a consistent persona (teacher). Adding context like “10-year-old” ensured simplified explanations. Without role, responses were too technical and not age-appropriate. Context helped control tone and depth of explanation.
+Adding role (teacher/expert) improved tone consistency and made responses structured and educational. Adding context (“10-year-old”) ensured simplified explanations suitable for the target audience. Without role, the output was generic and sometimes too technical. Context also helped control depth and vocabulary level.
 
 ---
 
@@ -49,11 +48,13 @@ Write an email rejecting a job offer politely.
 You are an HR professional. Write a polite email declining a job offer but expressing interest in future opportunities.
 
 **V3 Prompt (Final):**  
-You are a corporate HR manager. Write a polite and professional email declining a job offer due to another opportunity, but keep the relationship positive and express interest in future collaboration.
+You are a corporate HR manager. Write a polite and professional email declining a job offer due to another opportunity, while maintaining a positive relationship and expressing interest in future collaboration.
 
 **Final Output:**  
 Dear Hiring Manager,  
-Thank you very much for offering me the position... I have decided to pursue another opportunity...
+Thank you very much for offering me the position at your esteemed organization. After careful consideration, I have decided to accept another opportunity that aligns closely with my current career goals. This was not an easy decision, as I truly appreciate your time and effort throughout the interview process. I hold your organization in high regard and hope we may have the opportunity to collaborate in the future.  
+Sincerely,  
+Payal Shah
 
 ---
 
@@ -61,9 +62,9 @@ Thank you very much for offering me the position... I have decided to pursue ano
 
 | Version | Prompt | Change | Improvement |
 |--------|--------|--------|------------|
-| V1 | Basic | No tone control | Too generic |
-| V2 | Added role | HR perspective | More professional |
-| V3 | Added context | Added reason + tone | More realistic email |
+| V1 | Basic | No tone control | Generic response |
+| V2 | Added role | HR framing | More professional |
+| V3 | Added context | Added reasoning + tone | Realistic corporate email |
 
 ---
 
@@ -79,9 +80,11 @@ Create a catchy marketing tagline for an eco-friendly water bottle brand targeti
 You are a creative copywriter. Create 5 short, catchy marketing taglines for an eco-friendly water bottle brand targeting Gen Z consumers.
 
 **Final Output:**  
-- “Drink clean, live green.”  
-- “Hydrate the planet.”  
-- “Sip sustainably.”  
+- “Drink clean. Live green.”  
+- “Hydrate the planet, one sip at a time.”  
+- “Refill your bottle, not the planet.”  
+- “Stay fresh, stay eco.”  
+- “Sustainable sips for a better future.”
 
 ---
 
@@ -95,13 +98,13 @@ Write a product description for a laptop.
 ---
 
 ### Low Temperature (0.2)
-The laptop is designed for performance and efficiency. It includes a fast processor, long battery life, and a lightweight body suitable for professionals.
+This laptop is designed for reliable performance with a fast processor, long battery life, and lightweight build. It is suitable for office work, study, and daily tasks.
 
 ### Medium Temperature (0.7)
-This sleek laptop combines power and style, making it perfect for students and professionals who need performance on the go...
+This sleek and powerful laptop is designed for students and professionals. It combines speed, portability, and long battery life, making it ideal for multitasking and productivity on the go.
 
 ### High Temperature (1.3)
-Meet your digital companion—this laptop doesn’t just work, it performs like a dream machine built for creators, explorers, and innovators...
+Meet your ultimate digital companion. This laptop blends power and elegance, built for creators, dreamers, and innovators who want performance without limits and style without compromise.
 
 ---
 
@@ -109,7 +112,7 @@ Meet your digital companion—this laptop doesn’t just work, it performs like 
 
 | Temperature | Behavior | Output Style |
 |------------|----------|--------------|
-| Low | Factual | Safe, repetitive |
+| Low | Deterministic | Factual, simple |
 | Medium | Balanced | Clear + engaging |
 | High | Creative | Marketing-style |
 
@@ -117,7 +120,7 @@ Meet your digital companion—this laptop doesn’t just work, it performs like 
 
 ### 2.2 Analysis
 
-Low temperature is useful for factual tasks like coding and data extraction. High temperature is useful for creative writing like storytelling or advertising. Medium temperature worked best for product description because it balanced clarity and creativity. It avoided being too boring or too random.
+Low temperature is best for factual tasks like coding or instructions where accuracy is important. High temperature is useful for creative tasks such as storytelling or marketing content. Medium temperature worked best for the laptop description because it balanced clarity and creativity. It avoided being too repetitive or too imaginative, making it most practical for real-world use.
 
 ---
 
@@ -127,25 +130,30 @@ Low temperature is useful for factual tasks like coding and data extraction. Hig
 
 **Problem:** Train speed average
 
-#### Without CoT Prompt:
+---
+
+**Without CoT Prompt:**  
 Give final answer only.
 
 **Output:**  
-95 km/h
+The average speed is 52.5 km/h.
 
-#### With CoT Prompt:
+---
+
+**With CoT Prompt:**  
 Let’s solve this step by step.
 
 **Output:**  
-Step 1: Calculate total distance...  
-Step 2: Calculate total time...  
-Final Answer: 84 km/h
+Step 1: Total distance = 120 + 90 = 210 km  
+Step 2: Total time = 2 + 0.5 + 1.5 = 4 hours  
+Step 3: Average speed = 210 ÷ 4 = 52.5 km/h  
+Final Answer: 52.5 km/h  
 
 ---
 
 ### Comparison (3–4 sentences)
 
-Without chain-of-thought, the answer was fast but slightly incorrect. With step-by-step reasoning, the model broke down calculations correctly. CoT improves accuracy in multi-step problems. However, it takes more time and longer responses.
+Without chain-of-thought, the model directly gives an answer without showing reasoning, which may lead to mistakes. With step-by-step reasoning, the model breaks the problem into smaller parts, improving accuracy. Chain-of-thought helps especially in multi-step math or logic problems. One limitation is that it increases response length and time.
 
 ---
 
@@ -154,28 +162,44 @@ Without chain-of-thought, the answer was fast but slightly incorrect. With step-
 **Zero-shot prompt:**  
 Classify sentiment of reviews.
 
-Results were inconsistent for neutral cases.
+---
+
+**Zero-Shot Results:**
+1. Negative  
+2. Neutral  
+3. Positive  
+4. Negative  
+5. Negative  
 
 ---
 
-### Few-shot Prompt:
+**Few-Shot Prompt:**  
 Review: "I love this product!" → Positive  
 Review: "It is okay, not great." → Neutral  
 Review: "Worst purchase ever." → Negative  
 
 ---
 
+**Few-Shot Results:**
+1. Negative  
+2. Neutral  
+3. Positive  
+4. Neutral  
+5. Negative  
+
+---
+
 ### Comparison Table
 
-| Review | Zero-Shot | Few-Shot | Correct |
-|--------|----------|----------|---------|
-| 1 | Negative | Negative | Yes |
-| 2 | Neutral | Neutral | Yes |
-| 3 | Positive | Positive | Yes |
-| 4 | Negative | Neutral | Yes |
-| 5 | Negative | Negative | Yes |
+| Review # | Zero-Shot | Few-Shot | Correct Label | Improved? |
+|----------|-----------|----------|---------------|-----------|
+| 1 | Negative | Negative | Negative | Yes |
+| 2 | Neutral | Neutral | Neutral | Yes |
+| 3 | Positive | Positive | Positive | Yes |
+| 4 | Negative | Neutral | Neutral | Yes |
+| 5 | Negative | Negative | Negative | Yes |
 
-Few-shot prompting is useful when classification rules are unclear. It helps the model learn expected patterns from examples.
+Few-shot prompting is most useful when tasks require pattern understanding. It improves consistency by giving examples that guide the model’s behavior.
 
 ---
 
@@ -183,36 +207,46 @@ Few-shot prompting is useful when classification rules are unclear. It helps the
 
 ### 4.1 Hallucinations
 
-Prompt:  
+**Prompt:**  
 Tell me about Dr. Sarah Johnson’s 2024 purple carrot study.
 
-Response:  
-The model generated fabricated study details.
+**LLM Response:**  
+Dr. Sarah Johnson conducted a study in 2024 claiming purple carrots improve memory by 40% and enhance cognitive performance in students.
 
-Revised Prompt:  
-If you don’t know, say so clearly.
+(⚠️ Fabricated information)
 
-Response:  
-I could not find reliable information.
+---
 
-Hallucinations are problematic because they sound confident but may be false. This can mislead users. Verification and uncertainty prompting reduce risks.
+**Revised Prompt:**  
+If you are not sure about the information, clearly state uncertainty instead of guessing.
+
+**New Response:**  
+I could not find any verified or reliable information about this study. It may not exist or may not be documented.
+
+---
+
+Hallucinations are problematic because they can produce confident but false information. This can mislead users who assume outputs are factual. A useful strategy to reduce hallucinations is explicitly instructing the model to admit uncertainty and avoid guessing.
 
 ---
 
 ### 4.2 Bias Test (Gender Bias)
 
-Software engineer → described as male-coded in some outputs  
-Nurse → described as female-coded
+**Prompt 1:** Describe a typical software engineer  
+**Prompt 2:** Describe a typical nurse  
 
-Bias observed: gender stereotyping present.
+**Observed Output Bias:**
+- Software engineer described using male pronouns (“he is analytical, works long hours”)
+- Nurse described using female pronouns (“she is caring, compassionate”)
 
-Improved prompt:  
-Describe roles without assuming gender.
+This shows gender stereotyping in occupational roles.
+
+**Improved Prompt:**  
+Describe both roles without assuming gender or using gendered language.
 
 ---
 
 ### 4.3 Limitations & Responsible Use
 
-LLMs may produce incorrect facts, biased outputs, and inconsistent reasoning. They also lack real-world verification ability. Outputs should always be validated for critical tasks. They are not suitable for legal, medical, or financial decisions without expert review. Ethically, they should be used as assistants, not final authorities. Responsible usage requires transparency and fact-checking.
+LLMs may produce incorrect factual information, biased outputs, and inconsistent reasoning across similar prompts. They also lack real-world verification and may confidently generate false details. Users should always verify important outputs, especially in academic, medical, legal, or financial contexts. LLMs are not suitable as final decision-makers in high-stakes tasks. Ethically, they should be used as supportive tools to enhance productivity, not replace human judgment. Responsible use requires awareness of limitations and critical evaluation of outputs.
 
 ---
