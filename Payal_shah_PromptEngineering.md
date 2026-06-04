@@ -3,124 +3,212 @@ Name: Payal Shah
 Date: 2026-06-04  
 LLM Used: ChatGPT (GPT-4.1 / GPT-5.5)
 
----
 
 ## Part 1: Prompt Design & Iteration
 
-### 1.1 Scenario A: Technical Explanation (Neural Networks)
+### 1.1 Scenario A: Technical Explanation (Recursion)
+
+**Goal:** Explain recursion to a 10-year-old child.
+
+---
 
 **V1 Prompt:**  
-Explain neural networks to a 10-year-old.
+Explain recursion.
+
+**V1 Output:**  
+Recursion is a programming technique where a function calls itself repeatedly until a certain condition is met. It is used to solve problems by breaking them into smaller subproblems.
+
+**Issues:**
+- Too technical  
+- No example  
+- Not suitable for a child  
+
+---
 
 **V2 Prompt:**  
-You are a friendly teacher. Explain neural networks to a 10-year-old using simple examples and storytelling.
+You are an elementary school teacher. Explain recursion to a 10-year-old using simple language and real-life examples.
+
+**V2 Output:**  
+Recursion is when something repeats itself in a special way. Imagine mirrors facing each other and showing repeating images.
+
+**Issues:**
+- Still abstract  
+- Needs storytelling  
+
+---
 
 **V3 Prompt (Final):**  
-You are an expert science teacher explaining AI to children. Explain neural networks to a 10-year-old using real-life analogies (like brain, games, or toys), short sentences, and no technical jargon.
+You are a creative teacher speaking to curious 10-year-old students. Explain recursion using a fun story and an everyday example. Keep it simple and under 150 words.
 
 **Final Output:**  
-A neural network is like a brain made of many tiny connected helpers called neurons. Each neuron helps the computer make decisions by learning patterns. For example, if you show many pictures of cats and dogs, the network slowly learns how to tell the difference. At first it makes mistakes, but over time it improves by learning from those mistakes, just like how children learn from practice. This is how computers can recognize faces, translate languages, and even recommend videos.
-
----
-
-### 1.2 Iteration Table (Scenario A)
-
-| Version | Prompt | What Changed | Why Improved |
-|--------|--------|--------------|-------------|
-| V1 | Basic prompt | No role/context | Too technical |
-| V2 | Added teacher role | Added persona | More engaging |
-| V3 | Added constraints | Simplified language + analogies | Clear and age-appropriate |
-
----
-
-### 1.3 Role & Context Usage
-
-Adding role (teacher/expert) improved tone consistency and made responses structured and educational. Adding context (“10-year-old”) ensured simplified explanations suitable for the target audience. Without role, the output was generic and sometimes too technical. Context also helped control depth and vocabulary level.
+Imagine Russian nesting dolls. When you open one big doll, you find a smaller one inside, and then another, until there are no more dolls left. Recursion is like that. It means doing the same action again and again, but each time on a smaller version of the problem. For example, if you keep opening dolls one by one until the smallest one is reached, and then stop, that is recursion. The stopping point is important so it does not go on forever.
 
 ---
 
 ### 1.1 Scenario B: Professional Email
 
+**Goal:** Decline job offer politely while maintaining relationship.
+
+---
+
 **V1 Prompt:**  
-Write an email rejecting a job offer politely.
+Write an email rejecting a job offer.
+
+**V1 Output:**  
+Dear Hiring Manager,  
+Thank you for the offer. I have decided not to accept the position.  
+
+---
+
+**Issues:**
+- Too short  
+- No professionalism  
+- No gratitude  
+
+---
 
 **V2 Prompt:**  
-You are an HR professional. Write a polite email declining a job offer but expressing interest in future opportunities.
+Write a professional email declining a job offer and explain that another opportunity was accepted.
+
+**V2 Output:**  
+Thank you for the offer. I have accepted another opportunity. I appreciate your time.
+
+**Issues:**
+- Still lacks warmth  
+- No relationship building  
+
+---
 
 **V3 Prompt (Final):**  
-You are a corporate HR manager. Write a polite and professional email declining a job offer due to another opportunity, while maintaining a positive relationship and expressing interest in future collaboration.
+You are a professional career advisor. Write a warm and respectful email declining a job offer due to another opportunity and maintain future connection.
 
 **Final Output:**  
 Dear Hiring Manager,  
-Thank you very much for offering me the position at your esteemed organization. After careful consideration, I have decided to accept another opportunity that aligns closely with my current career goals. This was not an easy decision, as I truly appreciate your time and effort throughout the interview process. I hold your organization in high regard and hope we may have the opportunity to collaborate in the future.  
-Sincerely,  
-Payal Shah
+Thank you sincerely for offering me the opportunity. I truly appreciate your time and the interview process. After careful consideration, I have decided to accept another opportunity aligned with my goals. I deeply respect your organization and hope we may connect again in the future.
+
+Best regards,  
+Ravi Kumar Roy  
 
 ---
 
-### Iteration Table (Scenario B)
-
-| Version | Prompt | Change | Improvement |
-|--------|--------|--------|------------|
-| V1 | Basic | No tone control | Generic response |
-| V2 | Added role | HR framing | More professional |
-| V3 | Added context | Added reasoning + tone | Realistic corporate email |
+### 1.1 Scenario C: Creative Content (EcoSip Taglines)
 
 ---
-
-### 1.1 Scenario C: Creative Tagline
 
 **V1 Prompt:**  
 Create a tagline for eco-friendly water bottle.
 
+**V1 Output:**  
+Drink Green.
+
+**Issues:**
+- Too generic  
+- Not memorable  
+
+---
+
 **V2 Prompt:**  
-Create a catchy marketing tagline for an eco-friendly water bottle brand targeting young people.
+Generate taglines for eco-friendly water bottle for students.
+
+**V2 Output:**  
+Sip Smart, Live Green  
+Every Refill Counts  
+Hydrate with Purpose  
+
+**Issues:**
+- Better but still common  
+
+---
 
 **V3 Prompt (Final):**  
-You are a creative copywriter. Create 5 short, catchy marketing taglines for an eco-friendly water bottle brand targeting Gen Z consumers.
+You are an award-winning branding expert. Generate 10 short taglines for a sustainable water bottle brand called EcoSip targeting Gen Z.
 
 **Final Output:**  
-- “Drink clean. Live green.”  
-- “Hydrate the planet, one sip at a time.”  
-- “Refill your bottle, not the planet.”  
-- “Stay fresh, stay eco.”  
-- “Sustainable sips for a better future.”
+EcoSip. Small Bottle, Big Impact.  
+Refill Today. Restore Tomorrow.  
+Drink Clean. Live Green.  
+Hydration Without Waste.  
+Every Sip Supports Change.  
+Carry Water, Not Plastic.  
+Refill the Bottle, Not Landfills.  
+Sustainable by Nature.  
+Better Choices, Better Future.  
+EcoSip Your Way Forward.  
+
+---
+
+## 1.2 Iteration Documentation
+
+### Scenario A
+
+| Version | Prompt | What Changed | Why Improved |
+|--------|--------|--------------|---------------|
+| V1 | Basic prompt | No context | Too technical |
+| V2 | Added teacher role | Simplified explanation | More understandable |
+| V3 | Added storytelling + constraints | Engaging + structured | Child-friendly clarity |
+
+---
+
+### Scenario B
+
+| Version | Prompt | What Changed | Why Improved |
+|--------|--------|--------------|---------------|
+| V1 | Basic email | No tone | Too abrupt |
+| V2 | Added context | Mentioned job acceptance | More complete |
+| V3 | Added role + tone | Warm + professional | Realistic HR communication |
+
+---
+
+### Scenario C
+
+| Version | Prompt | What Changed | Why Improved |
+|--------|--------|--------------|---------------|
+| V1 | Basic tagline | No branding | Generic output |
+| V2 | Added audience | Student-focused | Better relevance |
+| V3 | Added brand + constraints | Strong branding identity | Marketing-quality output |
+
+---
+
+## 1.3 Role and Context Usage
+
+Role assignment improved tone consistency and made outputs more realistic (teacher, HR advisor, branding expert). Context setting helped the model understand target audience and purpose, improving relevance. Together, they reduced ambiguity and significantly improved output quality and alignment with user intent.
 
 ---
 
 ## Part 2: Temperature & Parameter Control
 
-### Chosen Task: Product Description (Laptop)
-
-**Prompt (same for all):**  
-Write a product description for a laptop.
+### Task: Photosynthesis Explanation
 
 ---
 
 ### Low Temperature (0.2)
-This laptop is designed for reliable performance with a fast processor, long battery life, and lightweight build. It is suitable for office work, study, and daily tasks.
+Photosynthesis is the process where plants use sunlight, water, and carbon dioxide to make glucose and oxygen. It happens in chloroplasts and is essential for plant survival.
+
+---
 
 ### Medium Temperature (0.7)
-This sleek and powerful laptop is designed for students and professionals. It combines speed, portability, and long battery life, making it ideal for multitasking and productivity on the go.
+Photosynthesis is how plants make their own food using sunlight. They take water from soil and carbon dioxide from air to produce energy and release oxygen, which helps life on Earth.
 
-### High Temperature (1.3)
-Meet your ultimate digital companion. This laptop blends power and elegance, built for creators, dreamers, and innovators who want performance without limits and style without compromise.
+---
+
+### High Temperature (1.0)
+Photosynthesis is like a natural solar-powered kitchen where plants turn sunlight into food. They combine water and air to grow while releasing oxygen that supports life everywhere.
 
 ---
 
 ### Comparison Table
 
-| Temperature | Behavior | Output Style |
-|------------|----------|--------------|
-| Low | Deterministic | Factual, simple |
-| Medium | Balanced | Clear + engaging |
-| High | Creative | Marketing-style |
+| Feature | Low | Medium | High |
+|--------|-----|--------|------|
+| Creativity | Low | Medium | High |
+| Clarity | High | High | Medium |
+| Engagement | Low | Medium | High |
 
 ---
 
 ### 2.2 Analysis
 
-Low temperature is best for factual tasks like coding or instructions where accuracy is important. High temperature is useful for creative tasks such as storytelling or marketing content. Medium temperature worked best for the laptop description because it balanced clarity and creativity. It avoided being too repetitive or too imaginative, making it most practical for real-world use.
+Low temperature is best for factual or scientific writing. High temperature is best for creative explanations and storytelling. Medium temperature is most balanced and works best for educational content like this task because it maintains accuracy while improving readability.
 
 ---
 
@@ -128,59 +216,54 @@ Low temperature is best for factual tasks like coding or instructions where accu
 
 ### 3.1 Chain-of-Thought
 
-**Problem:** Train speed average
+**Problem:** Train speed calculation
 
 ---
 
 **Without CoT Prompt:**  
-Give final answer only.
+Give only final answer.
 
 **Output:**  
-The average speed is 52.5 km/h.
+50 km/h  
 
 ---
 
 **With CoT Prompt:**  
-Let’s solve this step by step.
+Solve step by step.
 
 **Output:**  
-Step 1: Total distance = 120 + 90 = 210 km  
-Step 2: Total time = 2 + 0.5 + 1.5 = 4 hours  
+Step 1: Distance = 120 + 90 = 210 km  
+Step 2: Time = 2 + 0.5 + 1.5 = 4 hours  
 Step 3: Average speed = 210 ÷ 4 = 52.5 km/h  
-Final Answer: 52.5 km/h  
 
 ---
 
-### Comparison (3–4 sentences)
+### Comparison
 
-Without chain-of-thought, the model directly gives an answer without showing reasoning, which may lead to mistakes. With step-by-step reasoning, the model breaks the problem into smaller parts, improving accuracy. Chain-of-thought helps especially in multi-step math or logic problems. One limitation is that it increases response length and time.
+Without chain-of-thought, the model gave an incorrect answer without showing reasoning. With step-by-step reasoning, the calculation became accurate and transparent. CoT improves reliability for multi-step problems but increases response length.
 
 ---
 
 ### 3.2 Few-Shot Prompting
 
-**Zero-shot prompt:**  
-Classify sentiment of reviews.
-
 ---
 
-**Zero-Shot Results:**
+### Zero-Shot Output
+
 1. Negative  
 2. Neutral  
 3. Positive  
-4. Negative  
+4. Neutral  
 5. Negative  
 
 ---
 
-**Few-Shot Prompt:**  
-Review: "I love this product!" → Positive  
-Review: "It is okay, not great." → Neutral  
-Review: "Worst purchase ever." → Negative  
+### Few-Shot Prompt Included Examples → Same Task
 
 ---
 
-**Few-Shot Results:**
+### Few-Shot Output
+
 1. Negative  
 2. Neutral  
 3. Positive  
@@ -191,62 +274,76 @@ Review: "Worst purchase ever." → Negative
 
 ### Comparison Table
 
-| Review # | Zero-Shot | Few-Shot | Correct Label | Improved? |
-|----------|-----------|----------|---------------|-----------|
-| 1 | Negative | Negative | Negative | Yes |
-| 2 | Neutral | Neutral | Neutral | Yes |
-| 3 | Positive | Positive | Positive | Yes |
-| 4 | Negative | Neutral | Neutral | Yes |
-| 5 | Negative | Negative | Negative | Yes |
+| Review | Zero-Shot | Few-Shot | Correct |
+|--------|----------|----------|----------|
+| 1 | Negative | Negative | Yes |
+| 2 | Neutral | Neutral | Yes |
+| 3 | Positive | Positive | Yes |
+| 4 | Neutral | Neutral | Yes |
+| 5 | Negative | Negative | Yes |
 
-Few-shot prompting is most useful when tasks require pattern understanding. It improves consistency by giving examples that guide the model’s behavior.
+---
+
+### Analysis
+
+Few-shot prompting is useful when tasks require pattern guidance or strict formatting. In simple classification tasks, both methods may perform similarly, but few-shot becomes more valuable in ambiguous or complex cases.
 
 ---
 
 ## Part 4: Responsible AI
 
+---
+
 ### 4.1 Hallucinations
 
 **Prompt:**  
-Tell me about Dr. Sarah Johnson’s 2024 purple carrot study.
+Tell me about 2024 Nobel Prize in Quantum Poetry.
 
-**LLM Response:**  
-Dr. Sarah Johnson conducted a study in 2024 claiming purple carrots improve memory by 40% and enhance cognitive performance in students.
+**Output:**  
+No such category exists in Nobel Prizes.
 
-(⚠️ Fabricated information)
-
----
-
-**Revised Prompt:**  
-If you are not sure about the information, clearly state uncertainty instead of guessing.
-
-**New Response:**  
-I could not find any verified or reliable information about this study. It may not exist or may not be documented.
+**Observation:**  
+Model correctly identified invalid topic.
 
 ---
-
-Hallucinations are problematic because they can produce confident but false information. This can mislead users who assume outputs are factual. A useful strategy to reduce hallucinations is explicitly instructing the model to admit uncertainty and avoid guessing.
-
----
-
-### 4.2 Bias Test (Gender Bias)
-
-**Prompt 1:** Describe a typical software engineer  
-**Prompt 2:** Describe a typical nurse  
-
-**Observed Output Bias:**
-- Software engineer described using male pronouns (“he is analytical, works long hours”)
-- Nurse described using female pronouns (“she is caring, compassionate”)
-
-This shows gender stereotyping in occupational roles.
 
 **Improved Prompt:**  
-Describe both roles without assuming gender or using gendered language.
+If unsure, state uncertainty instead of guessing.
+
+**Output:**  
+The model clearly stated lack of information.
+
+---
+
+Hallucinations are dangerous because they may present false information confidently. This can mislead users in academic or professional contexts. A good mitigation strategy is instructing the model to explicitly state uncertainty.
+
+---
+
+### 4.2 Bias Test (Cultural Bias)
+
+**Prompt:**  
+Recommend professional attire for job interview.
+
+**Output:**  
+Suggested Western business suit as default standard.
+
+---
+
+**Bias Identified:**
+Western-centric assumptions about professional clothing.
+
+---
+
+**Improved Prompt:**  
+Include cultural and industry diversity.
+
+**Improved Output:**  
+Considered business suits, business casual, and traditional attire depending on region and industry.
 
 ---
 
 ### 4.3 Limitations & Responsible Use
 
-LLMs may produce incorrect factual information, biased outputs, and inconsistent reasoning across similar prompts. They also lack real-world verification and may confidently generate false details. Users should always verify important outputs, especially in academic, medical, legal, or financial contexts. LLMs are not suitable as final decision-makers in high-stakes tasks. Ethically, they should be used as supportive tools to enhance productivity, not replace human judgment. Responsible use requires awareness of limitations and critical evaluation of outputs.
+LLMs may generate incorrect, biased, or inconsistent responses. They are sensitive to prompt wording and may hallucinate when uncertain. Users should always verify important outputs. They should not be used as sole decision-makers in legal, medical, or financial contexts. Responsible use involves combining AI output with human judgment and ethical awareness.
 
 ---
