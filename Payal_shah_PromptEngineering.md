@@ -59,7 +59,7 @@ Dear Hiring Manager,
 Thank you for the offer, but I have decided not to accept it.
 
 Regards,
-Kiaan
+Payal
 
 ### Refined Prompt (V2)
 
@@ -76,7 +76,7 @@ After careful consideration, I have decided to decline the offer at this time. T
 Thank you again for your time and consideration.
 
 Sincerely,
-Kiaan Shah
+Payal Shah
 
 ### Final Prompt (V3)
 
@@ -97,7 +97,7 @@ I am grateful for the opportunity to connect with your team, and I hope our path
 Wishing you and the team continued success.
 
 Best regards,
-Kiaan Shah
+Payal Shah
 
 ---
 
