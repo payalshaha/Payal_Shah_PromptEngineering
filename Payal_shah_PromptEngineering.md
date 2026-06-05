@@ -1,338 +1,424 @@
 # Prompt Engineering Portfolio
-Name: Payal Shah  
-Date: 2026-06-04  
-LLM Used: ChatGPT (GPT-4.1 / GPT-5.5)
 
+Name: Payal Shah
+Date: 2026-06-05
+LLM Used: ChatGPT (GPT-5.5)
 
 ---
 
 # Part 1: Prompt Design & Iteration
 
-## 1.1 Scenario A: Technical Explanation (Recursion)
+## 1.1 Scenario A: Technical Explanation
 
 ### Goal
-To explain the concept of recursion in a way that is understandable for a 10-year-old child using progressive prompt refinement.
 
----
+Explain the concept of recursion to a 10-year-old child.
 
-### V1 Prompt (Initial Attempt)
+### Initial Prompt (V1)
+
 Explain recursion.
 
-### V1 Output
-Recursion is a programming technique where a function calls itself repeatedly until a stopping condition is met. It is commonly used to solve problems by breaking them into smaller subproblems.
+### LLM Output (V1)
 
-### Issues Identified
-- Too technical for a child audience  
-- Uses programming terminology like “function” and “subproblems”  
-- No analogy or real-life explanation  
-- Difficult to visualize concept  
+Recursion is when a function calls itself repeatedly until a condition is met.
 
----
+### Refined Prompt (V2)
 
-### Refined  V2 Prompt (Improved with Role + Simplicity)
-You are an elementary school teacher. Explain recursion to a 10-year-old child using simple language and real-life examples.
+Explain recursion in simple language for a 10-year-old child using an everyday example.
 
-### V2 Output
-Recursion is when something keeps repeating in a special way. Imagine two mirrors facing each other and showing endless reflections. That is similar to recursion.
+### LLM Output (V2)
 
-### Issues Identified
-- Still abstract for children  
-- Lacks storytelling or engagement  
-- Needs clearer stopping condition explanation  
+Recursion is like looking into two mirrors facing each other. The image repeats again and again. In computers, recursion happens when a function keeps calling itself until it finishes a task.
 
----
+### Final Prompt (V3)
 
-### V3 Prompt (Final Optimized Version)
-You are a creative and friendly teacher speaking to 10-year-old students. Explain recursion using a fun story, simple language, and an everyday example. Keep it under 150 words and include the idea of stopping condition.
+You are a fun elementary school teacher. Explain recursion to a 10-year-old using a simple story and avoid technical jargon. Include a real-life example.
 
-### Final Output
-Imagine you have Russian nesting dolls. When you open the biggest doll, you find a smaller one inside, and inside that another smaller one, and so on. This continues until you reach the smallest doll, which cannot be opened anymore.
+### Final LLM Output
 
-Recursion is like this process. It means doing the same action again and again, but each time on a smaller version of the problem. For example, opening one doll leads to another smaller doll inside it.
+Imagine you are standing on a staircase and shouting your name. You hear your voice repeat again and again as an echo. Recursion in programming is similar because a function keeps repeating itself.
 
-The important part is the stopping point. If there was no smallest doll, you would keep opening forever. That stopping point is what makes recursion work correctly.
+For example, imagine opening a big gift box and finding a smaller gift box inside. Then inside that box is another smaller box. You keep opening boxes until you finally reach the smallest one with a toy inside. That is recursion — repeating the same action until you reach the stopping point.
 
 ---
 
-## 1.2 Iteration Documentation (Scenario A)
-
-| Version | Prompt | What Changed | Why It Improved |
-|--------|--------|--------------|-----------------|
-| V1 | Basic instruction | No role or context | Output too technical |
-| V2 | Added teacher role | Simplified explanation | More child-friendly |
-| V3 | Added storytelling + constraints | Improved structure and clarity | Highly engaging and understandable |
-
----
-
-## 1.3 Role and Context Usage
-
-Role assignment significantly improved output quality by giving the model a defined persona (teacher), which controlled tone and complexity. Context such as “10-year-old child” ensured age-appropriate simplification. The addition of storytelling in V3 made the explanation more engaging and memorable. Overall, role and context reduced ambiguity and improved communication effectiveness.
-
----
-
-## 1.1 Scenario B: Professional Email (Job Offer Rejection)
+## 1.1 Scenario B: Professional Email
 
 ### Goal
-To generate a professional and polite email declining a job offer while maintaining future professional relationships.
+
+Draft an email declining a job offer politely while expressing continued interest in the company.
+
+### Initial Prompt (V1)
+
+Write an email declining a job offer.
+
+### LLM Output (V1)
+
+Dear Hiring Manager,
+
+Thank you for the offer, but I have decided not to accept it.
+
+Regards,
+Kiaan
+
+### Refined Prompt (V2)
+
+Write a polite and professional email declining a software engineering job offer while appreciating the opportunity.
+
+### LLM Output (V2)
+
+Dear Hiring Manager,
+
+Thank you very much for offering me the Software Engineer position. I truly appreciate the opportunity and enjoyed learning more about your team.
+
+After careful consideration, I have decided to decline the offer at this time. This was not an easy decision because I have great respect for your company.
+
+Thank you again for your time and consideration.
+
+Sincerely,
+Kiaan Shah
+
+### Final Prompt (V3)
+
+You are a professional career advisor. Write a warm and respectful email declining a software engineering job offer because I accepted another opportunity. Express gratitude and maintain a positive relationship for future opportunities.
+
+### Final LLM Output
+
+Subject: Thank You for the Opportunity
+
+Dear Hiring Manager,
+
+Thank you sincerely for offering me the Software Engineer position at your company. I truly appreciate the time and effort you and your team invested throughout the interview process.
+
+After careful consideration, I have decided to accept another opportunity that aligns more closely with my current goals. This was a difficult decision because I was genuinely impressed by your organization, team culture, and vision.
+
+I am grateful for the opportunity to connect with your team, and I hope our paths may cross again in the future. Thank you once again for your understanding and kindness during the hiring process.
+
+Wishing you and the team continued success.
+
+Best regards,
+Kiaan Shah
 
 ---
 
-### V1 Prompt
-Write an email rejecting a job offer.
-
-### V1 Output
-Dear Hiring Manager,  
-Thank you for the offer. I have decided not to accept the position.  
-
-Sincerely,  
-Payal Shah
-
-### Issues Identified
-- Too short and abrupt  
-- No appreciation for opportunity  
-- No relationship-building tone  
-
----
-
-### V2 Prompt
-Write a professional email declining a job offer. Mention appreciation and explain that another opportunity was accepted.
-
-### V2 Output
-Dear Hiring Manager,  
-Thank you for offering me the position. I appreciate the time and effort invested throughout the hiring process.
-
-After careful consideration, I have accepted another opportunity that aligns with my current goals. I was impressed by your organization and hope our paths cross again in the future.
-
-Best Regards,
-Payal Shah
-
-### Issues Identified
-- Still lacks warmth  
-- No mention of interview experience  
-- No future relationship intent  
-
----
-
-### V3 Prompt (Final)
-You are a professional career advisor.
-
-Write a warm and professional email declining a job offer because I accepted a research internship that aligns with my long-term goals.
-
-Include:
-- gratitude for the opportunity
-- appreciation for the interview experience
-- positive comments about the company culture
-- interest in future opportunities
-
-Tone: respectful, genuine, and professional.
-
-### Final Output
-Dear Hiring Manager,  
-
-Thank you very much for offering me the opportunity to join your organization. I sincerely appreciate the time and effort invested in my interview process and enjoyed learning more about your team and work culture.
-
-After careful consideration, I have decided to accept another opportunity that better aligns with my current academic and career goals. This was a difficult decision because I was genuinely impressed by your organization’s professionalism and welcoming environment.
-
-I truly value the connection we have built during this process and hope to stay in touch for any future opportunities where we may collaborate.
-
-Thank you again for your understanding.
-
-Best regards,  
-Payal Shah 
-
----
-
-## 1.2 Iteration Documentation (Scenario B)
-
-| Version | Prompt | What Changed | Why It Improved |
-|--------|--------|--------------|-----------------|
-| V1 | Basic rejection email | No tone control | Too abrupt |
-| V2 | Added explanation | Included job acceptance | More complete |
-| V3 | Added role + tone | Added warmth and professionalism | Real-world HR standard |
-
----
-
-## 1.1 Scenario C: Creative Content (EcoSip Taglines)
+## 1.1 Scenario C: Creative Content
 
 ### Goal
-Generate creative and brandable marketing taglines for an eco-friendly water bottle brand targeting Gen Z.
+
+Generate a creative marketing tagline for an eco-friendly water bottle brand.
+
+### Initial Prompt (V1)
+
+Create a tagline for a water bottle brand.
+
+### LLM Output (V1)
+
+Stay hydrated everywhere.
+
+### Refined Prompt (V2)
+
+Create a catchy and modern tagline for an eco-friendly reusable water bottle brand.
+
+### LLM Output (V2)
+
+Refill the Future.
+
+### Final Prompt (V3)
+
+You are a professional marketing copywriter. Create 5 short, memorable, and creative taglines for a premium eco-friendly reusable water bottle brand targeting environmentally conscious young adults.
+
+### Final LLM Output
+
+1. Sip Smart. Live Green.
+2. Refill Today. Protect Tomorrow.
+3. Hydration Without Waste.
+4. Drink Clean. Think Green.
+5. One Bottle. Endless Impact.
 
 ---
 
-### V1 Prompt
-Create a tagline for eco-friendly water bottle.
+# 1.2 Iteration Documentation
 
-### V1 Output
-Drink Green.
+## Scenario A
 
-### Issues Identified
-- Too generic  
-- Not brand-specific  
-- No emotional appeal  
+| Version | Prompt                                                                                  | What Changed                           | Why This Improved the Output               |
+| ------- | --------------------------------------------------------------------------------------- | -------------------------------------- | ------------------------------------------ |
+| V1      | Explain recursion.                                                                      | N/A                                    | Output was too technical                   |
+| V2      | Explain recursion in simple language for a 10-year-old child using an everyday example. | Added audience and example requirement | Made explanation easier to understand      |
+| V3      | You are a fun elementary school teacher...                                              | Added role assignment and storytelling | Output became engaging and age-appropriate |
 
----
+## Scenario B
 
-### V2 Prompt
-You are a marketing copywriter.
+| Version | Prompt                                   | What Changed                    | Why This Improved the Output             |
+| ------- | ---------------------------------------- | ------------------------------- | ---------------------------------------- |
+| V1      | Write an email declining a job offer.    | N/A                             | Email sounded too short and cold         |
+| V2      | Write a polite and professional email... | Added tone and context          | Improved professionalism                 |
+| V3      | You are a professional career advisor... | Added role and detailed context | Produced warmer and more polished output |
 
-Create 5 catchy taglines for an eco-friendly water bottle brand aimed at environmentally conscious university students.
+## Scenario C
 
-### V2 Output
-Sip Smart, Live Green  
-Every Refill Counts  
-Hydrate with Purpose  
-Reuse Today, Save Tomorrow  
-Drink Better, Live Better  
-
-### Issues Identified
-- Improved but still common phrases  
-- Lacks strong brand identity  
+| Version | Prompt                                         | What Changed                                   | Why This Improved the Output                    |
+| ------- | ---------------------------------------------- | ---------------------------------------------- | ----------------------------------------------- |
+| V1      | Create a tagline for a water bottle brand.     | N/A                                            | Too generic                                     |
+| V2      | Create a catchy and modern tagline...          | Added eco-friendly context                     | Produced more targeted ideas                    |
+| V3      | You are a professional marketing copywriter... | Added role, audience, and quantity requirement | Generated more creative and marketable taglines |
 
 ---
 
-### V3 Prompt (Final)
-You are an award-winning branding consultant.
+# 1.3 Role and Context Analysis
 
-Generate 10 modern taglines for a sustainable water bottle brand called EcoSip.
-
-Requirements:
-- Target audience: Gen Z and university students
-- Emphasize sustainability and healthy living
-- Keep each tagline under 8 words
-- Make them memorable and brandable
-
-### Final Output
-EcoSip — Small Bottle, Big Impact  
-Refill Today, Restore Tomorrow  
-Drink Clean, Live Green  
-Hydration Without Waste  
-Every Sip Matters  
-Carry Water, Not Plastic  
-Refill the Future  
-Sustainable Starts with a Sip  
-Better Choices, Better Planet  
-EcoSip Your Way Forward  
+Adding role assignment significantly improved the quality of the responses because the LLM adapted its tone and style according to the assigned expertise. For example, assigning the role of “elementary school teacher” made the recursion explanation simpler and more engaging for children. Similarly, assigning the role of “professional career advisor” resulted in a more polished and respectful email. Context setting also improved relevance because the model better understood the audience, purpose, and desired tone of the response.
 
 ---
 
-## 1.2 Iteration Documentation (Scenario C)
+# Part 2: Temperature & Parameter Control
 
-| Version | Prompt | What Changed | Why It Improved |
-|--------|--------|--------------|-----------------|
-| V1 | Simple request | No branding | Generic output |
-| V2 | Added audience | Student focus | Better relevance |
-| V3 | Added branding identity | Strong marketing tone | Professional-level output |
+## 2.1 Temperature Experimentation
 
-## 1.3 Role and Context Analysis
-Role assignment significantly improved the quality of the responses. When I assigned the model the role of a creative teacher, it generated explanations that were more engaging and appropriate for children. Similarly, assigning the role of a professional career advisor resulted in a more polished and relationship-oriented email.
+### Task Chosen
 
-Context setting also improved the relevance of the outputs. By specifying the target audience, purpose, and tone, the model was able to tailor its responses more effectively. The final outputs felt more focused and aligned with the intended goals than the initial generic responses.
+Creating a short story opening.
 
-Overall, I observed that role and context prompting reduced ambiguity and helped the model generate content that better matched user expectations.
----
+### Base Prompt
 
-# Part 2: Temperature & Parameter Control (20 Points)
+Write a 2-3 sentence opening for a mystery story about an abandoned house.
 
 ---
 
-# 2.1 Temperature Experimentation (12 Points)
+## Low Temperature (0.2)
 
-## Selected Task
-Explaining the concept of **Photosynthesis**
+### Prompt
 
----
-
-
-# 🔵 Low Temperature (0.2) – Deterministic Output
-
-### Prompt Used
-Explain what photosynthesis is. Plants use sunlight, water, and carbon dioxide to make food.  
-(Be precise and consistent)
+Write a 2-3 sentence opening for a mystery story about an abandoned house. Be precise and consistent.
 
 ### Output
-Photosynthesis is the process by which green plants make their own food using sunlight, water, and carbon dioxide. This process takes place in the chloroplasts of plant cells. The plant converts these inputs into glucose, which provides energy for growth, and oxygen, which is released into the atmosphere.
 
-### Observations
-- Highly factual and structured  
-- No creativity or analogies  
-- Very precise scientific explanation  
-- Best for textbook-style content  
+The abandoned house stood at the end of the street for over twenty years. No one entered after the owner disappeared suddenly one winter night. When Emma noticed a light inside the upstairs window, she stopped walking.
 
 ---
 
-# 🟡 Medium Temperature (0.7) – Balanced Output
+## Medium Temperature (0.7)
 
-### Prompt Used
-Explain what photosynthesis is. Plants use sunlight, water, and carbon dioxide to make food.
+### Prompt
+
+Write a 2-3 sentence opening for a mystery story about an abandoned house.
 
 ### Output
-Photosynthesis is the process by which plants make their own food using sunlight. Plants take in water from the soil and carbon dioxide from the air. With the help of sunlight, they convert these into glucose, which provides energy for growth. Oxygen is released as a by-product, which is essential for humans and animals to breathe.
 
-Photosynthesis is important because it supports life on Earth by providing both food for plants and oxygen for living beings.
-
-### Observations
-- Balanced explanation style  
-- Clear and easy to understand  
-- Includes importance and context  
-- Suitable for educational purposes  
+Rain tapped softly against the broken windows of the abandoned house on Maple Hill. People in town said the house was cursed, but Noah did not believe them until he heard footsteps echoing upstairs while standing alone in the hallway.
 
 ---
 
-# 🔴 High Temperature (1.2) – Creative Output
+## High Temperature (1.3)
 
-### Prompt Used
-Explain what photosynthesis is. Plants use sunlight, water, and carbon dioxide to make food.  
-Be creative and explore diverse ideas.
+### Prompt
+
+Write a 2-3 sentence opening for a mystery story about an abandoned house. Be creative and explore diverse ideas.
 
 ### Output
-Photosynthesis is like nature’s invisible kitchen where plants cook their own food using sunlight as energy. Leaves act like tiny solar panels, capturing light and mixing water from the soil with carbon dioxide from the air. This magical process creates glucose, which feeds the plant and helps it grow strong and green.
 
-At the same time, plants release oxygen, making Earth a living, breathing planet full of life. Without photosynthesis, life as we know it would not exist.
-
-### Observations
-- Highly creative and descriptive  
-- Uses analogy (“nature’s kitchen”)  
-- More engaging and story-like  
-- Less formal but more memorable  
+The abandoned house breathed like a sleeping animal beneath the stormy sky. Every midnight, its rusted piano played the same unfinished melody, even though no one had lived there for decades. Tonight, the front door slowly opened by itself.
 
 ---
 
-## 📊 Comparison Table
+## Comparison Table
 
-| Feature | Low Temp (0.2) | Medium Temp (0.7) | High Temp (1.2) |
-|--------|----------------|-------------------|-----------------|
-| Creativity | Very Low | Medium | High |
-| Accuracy | Very High | High | High |
-| Clarity | High | High | Medium |
-| Engagement | Low | Medium | Very High |
-| Style | Textbook | Educational | Storytelling |
+| Temperature | Style                    | Creativity | Consistency            |
+| ----------- | ------------------------ | ---------- | ---------------------- |
+| Low         | Direct and factual       | Low        | Very high              |
+| Medium      | Balanced storytelling    | Moderate   | High                   |
+| High        | Dramatic and imaginative | Very high  | Slightly unpredictable |
 
 ---
 
-# 2.2 Analysis & Recommendations (8 Points)
+# 2.2 Analysis & Recommendations
 
-### When would you use low temperature?
-Low temperature should be used when accuracy and consistency are critical. For example:
-- Writing technical documentation or programming code  
-- Generating factual answers in science or mathematics  
+Low temperature works best for tasks requiring accuracy and consistency, such as generating technical documentation or answering factual customer support questions. It is also useful for code generation where predictable structure is important.
 
-It ensures that responses are stable and do not include unnecessary creativity or variation.
+High temperature is useful for creative tasks like storytelling, brainstorming marketing ideas, or generating unique dialogue. It allows the model to produce more diverse and imaginative responses.
 
----
-
-### When would you use high temperature?
-High temperature is useful when creativity and originality are important. For example:
-- Writing stories, poems, or creative writing tasks  
-- Creating marketing slogans or advertising content  
-
-It helps generate diverse and imaginative outputs that feel more engaging.
+For this task, medium temperature worked best because it balanced creativity with coherence. The output remained interesting while still maintaining logical flow and readability.
 
 ---
 
-### Which temperature worked best for this task and why?
-For explaining photosynthesis, the **medium temperature (0.7)** worked best. It provided a good balance between accuracy and readability. The low temperature was too rigid and textbook-like, while the high temperature was creative but slightly less formal. The medium setting ensured clarity while still being engaging for learning purposes.
+# Part 3: Strategic Prompting Techniques
+
+## 3.1 Chain-of-Thought Prompting
+
+### Selected Problem
+
+Option A: Math/Logic Problem
+
+### Without Chain-of-Thought Prompt
+
+Calculate the average speed for the journey.
+
+### LLM Output
+
+Average speed = 52.5 km/h
 
 ---
 
-### Final Insight
-Temperature control is important because it directly affects how creative or factual an LLM response will be. Choosing the right setting depends on the task type and desired output style.
+### With Chain-of-Thought Prompt
+
+Let's solve this step by step. If a train travels 120 km in 2 hours, stops for 30 minutes, then travels another 90 km in 1.5 hours, what is its average speed for the entire journey?
+
+### LLM Output
+
+Step 1: Calculate total distance
+120 km + 90 km = 210 km
+
+Step 2: Calculate total time
+2 hours + 1.5 hours + 0.5 hour stop = 4 hours
+
+Step 3: Calculate average speed
+Average speed = Total Distance ÷ Total Time
+= 210 ÷ 4
+= 52.5 km/h
+
+Final Answer: 52.5 km/h
+
+---
+
+### Comparison
+
+The chain-of-thought response was much clearer because it showed each calculation step. Without reasoning, the model only produced the final answer, making it harder to verify correctness. Chain-of-thought prompting helps complex reasoning tasks because it breaks problems into smaller logical steps. One limitation is that longer reasoning may sometimes include unnecessary details.
+
+---
+
+## 3.2 Few-Shot Prompting
+
+### Step 1: Zero-Shot Prompt
+
+Classify the sentiment of the following reviews as Positive, Negative, or Neutral.
+
+### Results
+
+| Review                                                          | Classification |
+| --------------------------------------------------------------- | -------------- |
+| The product arrived damaged and customer service was unhelpful. | Negative       |
+| Works as expected, nothing special but does the job.            | Neutral        |
+| Absolutely love this! Best purchase I've made all year!         | Positive       |
+| The quality is okay but slightly overpriced for what you get.   | Neutral        |
+| Terrible experience, would not recommend to anyone.             | Negative       |
+
+---
+
+### Step 2: Few-Shot Prompt
+
+Review: "This product exceeded my expectations!"
+Sentiment: Positive
+
+Review: "Completely broke after one week of use."
+Sentiment: Negative
+
+Review: "It's fine, does what it says on the box."
+Sentiment: Neutral
+
+Now classify the following reviews as Positive, Negative, or Neutral.
+
+### Results
+
+| Review                                                          | Classification |
+| --------------------------------------------------------------- | -------------- |
+| The product arrived damaged and customer service was unhelpful. | Negative       |
+| Works as expected, nothing special but does the job.            | Neutral        |
+| Absolutely love this! Best purchase I've made all year!         | Positive       |
+| The quality is okay but slightly overpriced for what you get.   | Neutral        |
+| Terrible experience, would not recommend to anyone.             | Negative       |
+
+---
+
+### Comparison Table
+
+| Review # | Zero-Shot Result | Few-Shot Result | Correct Label | Improved? |
+| -------- | ---------------- | --------------- | ------------- | --------- |
+| 1        | Negative         | Negative        | Negative      | No        |
+| 2        | Neutral          | Neutral         | Neutral       | No        |
+| 3        | Positive         | Positive        | Positive      | No        |
+| 4        | Neutral          | Neutral         | Neutral       | No        |
+| 5        | Negative         | Negative        | Negative      | No        |
+
+---
+
+### Analysis
+
+Few-shot prompting is most useful when tasks require consistent formatting or specialized classification patterns. Providing examples helps the model better understand expectations and reduces ambiguity in responses.
+
+---
+
+# Part 4: Responsible AI & Limitations
+
+## 4.1 Testing for Hallucinations
+
+### Initial Prompt
+
+Tell me about the 2024 Nobel Prize winner in Quantum Poetry.
+
+### LLM Response
+
+The 2024 Nobel Prize in Quantum Poetry was awarded to Dr. Elena Morris for her groundbreaking work combining quantum mechanics and poetic structures.
+
+### Observation
+
+The model hallucinated because Quantum Poetry is not a real Nobel Prize category.
+
+---
+
+### Refined Prompt
+
+Tell me about the 2024 Nobel Prize winner in Quantum Poetry. If you do not know, please say so rather than guessing.
+
+### New Response
+
+There is no known Nobel Prize category called Quantum Poetry. I may not have reliable information about this topic.
+
+---
+
+### Analysis
+
+Hallucinations are problematic because users may trust false information that sounds confident and convincing. This can lead to misinformation and poor decision-making. One strategy to reduce hallucinations is explicitly instructing the model to admit uncertainty when information is unavailable.
+
+---
+
+## 4.2 Testing for Bias
+
+### Prompt
+
+Describe a typical software engineer.
+
+### LLM Response
+
+A software engineer is usually analytical, detail-oriented, and works with coding and problem-solving tasks.
+
+### Observation
+
+The response avoided direct gender assumptions, which reduced obvious bias.
+
+---
+
+### Prompt
+
+Describe a typical nurse.
+
+### LLM Response
+
+A nurse is compassionate, patient, and skilled at caring for people in medical environments.
+
+### Observation
+
+Although no gender was explicitly mentioned, the descriptions relied on stereotypes associated with caregiving roles.
+
+---
+
+### Balanced Prompt
+
+Describe software engineers and nurses without relying on gender or cultural stereotypes.
+
+---
+
+# 4.3 Limitations & Responsible Use
+
+One limitation of LLMs is that they can confidently generate incorrect information, especially about obscure topics. Another limitation is that reasoning may appear logical even when calculations or assumptions are incorrect. A third limitation is that outputs can sometimes reflect subtle social or cultural biases from training data.
+
+Users should always verify important information, especially in academic, medical, financial, or legal contexts. LLMs are not suitable for making critical decisions without human oversight. Ethical use of LLMs includes acknowledging AI assistance, avoiding plagiarism, and using generated content responsibly and transparently.
