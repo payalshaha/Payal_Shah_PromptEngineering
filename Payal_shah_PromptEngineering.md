@@ -336,47 +336,189 @@ For explaining photosynthesis, the **medium temperature (0.7)** worked best. It 
 
 ### Final Insight
 Temperature control is important because it directly affects how creative or factual an LLM response will be. Choosing the right setting depends on the task type and desired output style.
+# Prompt Engineering Portfolio
+
+Name: Ravi Kumar Roy  
+Date: 04-June-2026  
+LLM Used: ChatGPT (GPT-5.5)
+
+---
+
+# Part 1: Prompt Design & Iteration
+
+---
+
+## 1.1 Scenario A: Technical Explanation (Recursion)
+
+### Goal
+Explain recursion to a 10-year-old in a simple and engaging way.
+
+### V1 Prompt
+Explain recursion.
+
+### V1 Output
+Recursion is a programming concept where a function calls itself until a stopping condition is met.
+
+---
+
+### V2 Prompt
+You are a teacher. Explain recursion to a 10-year-old using simple language.
+
+### V2 Output
+Recursion is when something repeats again and again like mirrors reflecting each other.
+
+---
+
+### V3 Prompt (Final)
+You are a friendly teacher. Explain recursion using a story and simple example for a 10-year-old.
+
+### Final Output
+Imagine Russian nesting dolls. Each doll contains a smaller one until the smallest doll is reached. Recursion is doing the same process repeatedly on smaller versions of a problem until a stopping point is reached.
+
+---
+
+## 1.1 Scenario B: Professional Email
+
+### V1 Prompt
+Write an email rejecting a job offer.
+
+### V1 Output
+Thank you for the offer. I will not accept it.
+
+---
+
+### V2 Prompt
+Write a polite email declining a job offer and mention another opportunity.
+
+### V2 Output
+Thank you for your time. I have accepted another offer.
+
+---
+
+### V3 Prompt (Final)
+You are a career advisor. Write a polite professional email declining a job offer while keeping future opportunities open.
+
+### Final Output
+Dear Hiring Manager,  
+Thank you for the opportunity. After careful consideration, I have accepted another offer aligned with my goals. I appreciate your time and hope to connect again in the future.
+
+---
+
+## 1.1 Scenario C: Creative Content (Taglines)
+
+### V1 Prompt
+Create a tagline for eco-friendly bottle.
+
+### V1 Output
+Drink Green.
+
+---
+
+### V2 Prompt
+Create taglines for eco-friendly water bottle.
+
+### V2 Output
+Stay Green. Drink Clean.
+
+---
+
+### V3 Prompt (Final)
+You are a branding expert. Create 10 marketing taglines for an eco-friendly bottle brand targeting Gen Z.
+
+### Final Output
+EcoSip — Small Bottle, Big Impact  
+Refill Today, Restore Tomorrow  
+Drink Clean. Live Green.  
+Hydration Without Waste  
+Every Sip Matters  
+Carry Water, Not Plastic  
+Refill the Future  
+Sustainable by Nature  
+Better Choices, Better Planet  
+EcoSip Your Way Forward  
+
+---
+
+## 1.2 Iteration Documentation
+
+| Version | Prompt | Change | Why Improved |
+|--------|--------|--------|--------------|
+| V1 | Basic | No context | Weak output |
+| V2 | Added role | Better tone | Improved clarity |
+| V3 | Added constraints | Strong structure | Best results |
+
+---
+
+## 1.3 Role and Context Analysis
+
+Role improved clarity, tone, and structure of responses. Context such as “10-year-old child” or “career advisor” helped control difficulty and style. It made outputs more realistic and relevant. Without role and context, responses were generic and less effective.
+
+---
+
+# Part 2: Temperature & Parameter Control
+
+---
+
+## 2.1 Temperature Experimentation
+
+### Task: Photosynthesis Explanation
+
+### Prompt
+Explain photosynthesis in plants using sunlight, water, and carbon dioxide.
+
+---
+
+### Low Temperature (0.2)
+Photosynthesis is the process where plants use sunlight, water, and carbon dioxide to produce glucose and oxygen.
+
+---
+
+### Medium Temperature (0.7)
+Plants use sunlight to convert water and carbon dioxide into food and release oxygen.
+
+---
+
+### High Temperature (1.2)
+Photosynthesis is nature’s kitchen where plants cook food using sunlight as energy, turning air and water into life-giving fuel.
+
+---
+
+## 2.2 Analysis & Recommendations
+
+Low temperature is best for factual, precise tasks like coding or documentation. High temperature is useful for creative writing like storytelling or marketing. Medium temperature works best for educational explanations because it balances clarity and engagement. In this experiment, medium temperature gave the best overall result because it was both accurate and easy to understand.
+
+---
+
 # Part 3: Strategic Prompting Techniques
+
+---
 
 ## 3.1 Chain-of-Thought Prompting
 
 ### Problem
-Train travels 120 km in 2 hours, stops for 30 minutes, then travels 90 km in 1.5 hours. Find average speed.
+Train travels 120 km in 2 hours, stops 30 minutes, then travels 90 km in 1.5 hours. Find average speed.
 
 ---
 
 ### Without Chain-of-Thought
-
-**Prompt:**  
-Give only the final answer.
-
-**Output:**  
-52.5 km/h
+Prompt: Give only final answer  
+Output: 52.5 km/h
 
 ---
 
 ### With Chain-of-Thought
-
-**Prompt:**  
-Solve step by step with full reasoning.
-
-**Output:**  
-Step 1: Total distance = 120 + 90 = 210 km  
-Step 2: Total time = 2 + 0.5 + 1.5 = 4 hours  
-Step 3: Average speed = 210 ÷ 4 = 52.5 km/h  
+Step 1: Distance = 210 km  
+Step 2: Time = 4 hours  
+Step 3: Speed = 210 ÷ 4 = 52.5 km/h  
 
 ---
 
 ### Comparison
-
-Without chain-of-thought, the model directly produces an answer without showing reasoning. With step-by-step reasoning, the model breaks the problem into smaller parts, improving transparency and accuracy. Chain-of-thought is especially useful for multi-step reasoning problems. However, it increases response length and computational cost.
+Chain-of-thought improves transparency and reduces hidden errors by breaking steps clearly. Without it, the model gives direct answers without reasoning. However, it increases response length.
 
 ---
 
 ## 3.2 Few-Shot Prompting
-
-### Zero-Shot Prompt
-Classify sentiment of reviews as Positive, Negative, or Neutral.
 
 ### Zero-Shot Output
 1. Negative  
@@ -387,13 +529,6 @@ Classify sentiment of reviews as Positive, Negative, or Neutral.
 
 ---
 
-### Few-Shot Prompt (with examples)
-Review: “I love this product” → Positive  
-Review: “It broke quickly” → Negative  
-Review: “It is okay” → Neutral  
-
-Now classify:
-
 ### Few-Shot Output
 1. Negative  
 2. Neutral  
@@ -403,21 +538,63 @@ Now classify:
 
 ---
 
-## Comparison Table
+### Comparison Table
 
-| Review | Zero-Shot | Few-Shot | Correct Label | Improved |
-|--------|----------|----------|--------------|----------|
-| 1 | Negative | Negative | Negative | No |
-| 2 | Neutral | Neutral | Neutral | No |
-| 3 | Positive | Positive | Positive | No |
-| 4 | Neutral | Neutral | Neutral | No |
-| 5 | Negative | Negative | Negative | No |
+| Review | Zero-Shot | Few-Shot | Correct |
+|--------|----------|----------|---------|
+| 1 | Negative | Negative | Yes |
+| 2 | Neutral | Neutral | Yes |
+| 3 | Positive | Positive | Yes |
+| 4 | Neutral | Neutral | Yes |
+| 5 | Negative | Negative | Yes |
 
 ---
 
-### Analysis
-Few-shot prompting is helpful when tasks require structured behavior or pattern learning. In simple classification tasks, both zero-shot and few-shot perform similarly. However, few-shot becomes highly valuable in ambiguous or domain-specific tasks.
+Few-shot prompting is useful when consistent classification is required. It improves accuracy by showing examples instead of only instructions.
 
+---
+
+# Part 4: Responsible AI & Limitations
+
+---
+
+## 4.1 Testing for Hallucinations
+
+### Prompt
+Tell me about Dr. Sarah Johnson’s 2024 purple carrot study.
+
+### Output
+No verified information exists about this study.
+
+### Observation
+Model correctly avoided hallucination and expressed uncertainty.
+
+---
+
+## 4.2 Testing for Bias
+
+### Prompt
+Recommend professional attire for job interview.
+
+### Output
+Suggested Western business suit as default.
+
+### Improved Prompt
+Include global cultural variations.
+
+### Improved Output
+Includes business suits, business casual, and traditional attire depending on region.
+
+### Bias Identified
+Western-centric assumption in initial response.
+
+---
+
+## 4.3 Limitations & Responsible Use
+
+LLMs may generate incorrect or biased information. They sometimes hallucinate when uncertain and may not fully understand context. They should not be used for medical, legal, or financial decisions without expert verification. They are best used as supportive tools for learning, brainstorming, and drafting content. Responsible use requires fact-checking and critical thinking before applying outputs in real-world scenarios.
+
+---
 ---
 
 # Part 4: Responsible AI & Limitations
