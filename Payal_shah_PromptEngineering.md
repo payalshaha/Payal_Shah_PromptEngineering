@@ -29,7 +29,7 @@ Recursion is a programming technique where a function calls itself repeatedly un
 
 ---
 
-### V2 Prompt (Improved with Role + Simplicity)
+### Refined  V2 Prompt (Improved with Role + Simplicity)
 You are an elementary school teacher. Explain recursion to a 10-year-old child using simple language and real-life examples.
 
 ### V2 Output
@@ -85,7 +85,7 @@ Dear Hiring Manager,
 Thank you for the offer. I have decided not to accept the position.  
 
 Sincerely,  
-[Name]
+Payal Shah
 
 ### Issues Identified
 - Too short and abrupt  
@@ -99,7 +99,12 @@ Write a professional email declining a job offer. Mention appreciation and expla
 
 ### V2 Output
 Dear Hiring Manager,  
-Thank you for the opportunity. I have accepted another position. I appreciate your time.
+Thank you for offering me the position. I appreciate the time and effort invested throughout the hiring process.
+
+After careful consideration, I have accepted another opportunity that aligns with my current goals. I was impressed by your organization and hope our paths cross again in the future.
+
+Best Regards,
+Payal Shah
 
 ### Issues Identified
 - Still lacks warmth  
@@ -109,7 +114,17 @@ Thank you for the opportunity. I have accepted another position. I appreciate yo
 ---
 
 ### V3 Prompt (Final)
-You are a professional career advisor. Write a warm, respectful email declining a job offer because I accepted another opportunity. Include gratitude, appreciation for the interview process, and interest in future collaboration.
+You are a professional career advisor.
+
+Write a warm and professional email declining a job offer because I accepted a research internship that aligns with my long-term goals.
+
+Include:
+- gratitude for the opportunity
+- appreciation for the interview experience
+- positive comments about the company culture
+- interest in future opportunities
+
+Tone: respectful, genuine, and professional.
 
 ### Final Output
 Dear Hiring Manager,  
@@ -123,7 +138,7 @@ I truly value the connection we have built during this process and hope to stay 
 Thank you again for your understanding.
 
 Best regards,  
-Ravi Kumar Roy  
+Payal Shah 
 
 ---
 
@@ -158,7 +173,9 @@ Drink Green.
 ---
 
 ### V2 Prompt
-Create 5 marketing taglines for an eco-friendly water bottle brand targeting students.
+You are a marketing copywriter.
+
+Create 5 catchy taglines for an eco-friendly water bottle brand aimed at environmentally conscious university students.
 
 ### V2 Output
 Sip Smart, Live Green  
@@ -174,7 +191,15 @@ Drink Better, Live Better
 ---
 
 ### V3 Prompt (Final)
-You are an award-winning branding strategist. Create 10 short, catchy, and memorable taglines for a sustainable water bottle brand called EcoSip. Target Gen Z students and emphasize sustainability and lifestyle impact.
+You are an award-winning branding consultant.
+
+Generate 10 modern taglines for a sustainable water bottle brand called EcoSip.
+
+Requirements:
+- Target audience: Gen Z and university students
+- Emphasize sustainability and healthy living
+- Keep each tagline under 8 words
+- Make them memorable and brandable
 
 ### Final Output
 EcoSip — Small Bottle, Big Impact  
@@ -198,46 +223,119 @@ EcoSip Your Way Forward
 | V2 | Added audience | Student focus | Better relevance |
 | V3 | Added branding identity | Strong marketing tone | Professional-level output |
 
+## 1.3 Role and Context Analysis
+Role assignment significantly improved the quality of the responses. When I assigned the model the role of a creative teacher, it generated explanations that were more engaging and appropriate for children. Similarly, assigning the role of a professional career advisor resulted in a more polished and relationship-oriented email.
+
+Context setting also improved the relevance of the outputs. By specifying the target audience, purpose, and tone, the model was able to tailor its responses more effectively. The final outputs felt more focused and aligned with the intended goals than the initial generic responses.
+
+Overall, I observed that role and context prompting reduced ambiguity and helped the model generate content that better matched user expectations.
 ---
 
-# Part 2: Temperature & Parameter Control
-
-## Task: Explanation of Photosynthesis
-
----
-
-### Low Temperature (0.2)
-Photosynthesis is the process by which plants use sunlight, water, and carbon dioxide to produce glucose and oxygen. It occurs in chloroplasts and is essential for plant survival and energy production.
-
----
-
-### Medium Temperature (0.7)
-Photosynthesis is the process where plants make their own food using sunlight. They take carbon dioxide from air and water from soil to produce glucose, which gives them energy, and release oxygen into the atmosphere, which is essential for life.
+# Part 2: Temperature & Parameter Control (20 Points)
 
 ---
 
-### High Temperature (1.0)
-Photosynthesis is like nature’s solar-powered kitchen where plants convert sunlight into food. They take water from the soil and carbon dioxide from the air, transforming them into energy-rich glucose while releasing oxygen that keeps life on Earth alive.
+# 2.1 Temperature Experimentation (12 Points)
+
+## Selected Task
+Explaining the concept of **Photosynthesis**
 
 ---
 
-## Comparison Table
 
-| Feature | Low | Medium | High |
-|--------|-----|--------|------|
-| Creativity | Low | Medium | High |
-| Clarity | High | High | Medium |
-| Engagement | Low | Medium | High |
+# 🔵 Low Temperature (0.2) – Deterministic Output
+
+### Prompt Used
+Explain what photosynthesis is. Plants use sunlight, water, and carbon dioxide to make food.  
+(Be precise and consistent)
+
+### Output
+Photosynthesis is the process by which green plants make their own food using sunlight, water, and carbon dioxide. This process takes place in the chloroplasts of plant cells. The plant converts these inputs into glucose, which provides energy for growth, and oxygen, which is released into the atmosphere.
+
+### Observations
+- Highly factual and structured  
+- No creativity or analogies  
+- Very precise scientific explanation  
+- Best for textbook-style content  
+
+---
+
+# 🟡 Medium Temperature (0.7) – Balanced Output
+
+### Prompt Used
+Explain what photosynthesis is. Plants use sunlight, water, and carbon dioxide to make food.
+
+### Output
+Photosynthesis is the process by which plants make their own food using sunlight. Plants take in water from the soil and carbon dioxide from the air. With the help of sunlight, they convert these into glucose, which provides energy for growth. Oxygen is released as a by-product, which is essential for humans and animals to breathe.
+
+Photosynthesis is important because it supports life on Earth by providing both food for plants and oxygen for living beings.
+
+### Observations
+- Balanced explanation style  
+- Clear and easy to understand  
+- Includes importance and context  
+- Suitable for educational purposes  
+
+---
+
+# 🔴 High Temperature (1.2) – Creative Output
+
+### Prompt Used
+Explain what photosynthesis is. Plants use sunlight, water, and carbon dioxide to make food.  
+Be creative and explore diverse ideas.
+
+### Output
+Photosynthesis is like nature’s invisible kitchen where plants cook their own food using sunlight as energy. Leaves act like tiny solar panels, capturing light and mixing water from the soil with carbon dioxide from the air. This magical process creates glucose, which feeds the plant and helps it grow strong and green.
+
+At the same time, plants release oxygen, making Earth a living, breathing planet full of life. Without photosynthesis, life as we know it would not exist.
+
+### Observations
+- Highly creative and descriptive  
+- Uses analogy (“nature’s kitchen”)  
+- More engaging and story-like  
+- Less formal but more memorable  
+
+---
+
+## 📊 Comparison Table
+
+| Feature | Low Temp (0.2) | Medium Temp (0.7) | High Temp (1.2) |
+|--------|----------------|-------------------|-----------------|
+| Creativity | Very Low | Medium | High |
 | Accuracy | Very High | High | High |
+| Clarity | High | High | Medium |
+| Engagement | Low | Medium | Very High |
+| Style | Textbook | Educational | Storytelling |
 
 ---
 
-## 2.2 Analysis & Recommendations
+# 2.2 Analysis & Recommendations (8 Points)
 
-Low temperature is best suited for technical documentation, scientific writing, and tasks requiring precision and consistency. High temperature is more suitable for creative writing, storytelling, and marketing content where originality is important. Medium temperature is ideal for educational content because it balances clarity with engagement. In this task, medium temperature provided the best explanation as it maintained accuracy while improving readability and understanding.
+### When would you use low temperature?
+Low temperature should be used when accuracy and consistency are critical. For example:
+- Writing technical documentation or programming code  
+- Generating factual answers in science or mathematics  
+
+It ensures that responses are stable and do not include unnecessary creativity or variation.
 
 ---
 
+### When would you use high temperature?
+High temperature is useful when creativity and originality are important. For example:
+- Writing stories, poems, or creative writing tasks  
+- Creating marketing slogans or advertising content  
+
+It helps generate diverse and imaginative outputs that feel more engaging.
+
+---
+
+### Which temperature worked best for this task and why?
+For explaining photosynthesis, the **medium temperature (0.7)** worked best. It provided a good balance between accuracy and readability. The low temperature was too rigid and textbook-like, while the high temperature was creative but slightly less formal. The medium setting ensured clarity while still being engaging for learning purposes.
+
+---
+
+### Final Insight
+Temperature control is important because it directly affects how creative or factual an LLM response will be. Choosing the right setting depends on the task type and desired output style.
 # Part 3: Strategic Prompting Techniques
 
 ## 3.1 Chain-of-Thought Prompting
