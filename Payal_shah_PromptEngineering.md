@@ -107,7 +107,7 @@ Dear Hiring Manager,
 Thank you for the offer, but I have decided not to accept it.
 
 Regards,
-[Name]
+Payal Shah
 
 ### Analysis
 
@@ -132,7 +132,7 @@ Thank you very much for offering me the position. I appreciate the opportunity a
 Thank you again for your time and consideration.
 
 Best regards,
-[Name]
+Payal Shah
 
 ### Analysis
 
@@ -163,7 +163,7 @@ This was not an easy decision because I hold your company in very high regard. I
 Thank you once again for your kindness and professionalism. I wish you and your team continued success.
 
 Best regards,
-[Your Name]
+Payal Shah
 
 ---
 
